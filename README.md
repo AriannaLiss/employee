@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Cisco SNA UI New Hire Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Directions:
 
-## Available Scripts
+Create a new application that displays Employee information. 
+The application should contain a `Dashboard` page and an `Add Employee Form` page. 
 
-In the project directory, you can run:
+The `Dashboard` page should do the following:
 
-### `npm start`
+- Display employee information in a table
+- Allow to sort all table columns in ascending and descending order
+- Load application data from the supplied JSON file
+- Contain an `Add Employee` button, which navigates to the `Add Employee Form` page
+- Update the employee table after adding a new employee
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Use the attached wireframe as an example of how the application should generally look.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tools:
 
-### `npm test`
+Write the application using a JavaScript library of your choice.
+Test the application using a technology of your choice.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Extra Credit (not required):
 
-### `npm run build`
+Display the charts in the wireframe using a chart library of your choice.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Display a pie chart showing the number of employees by Job Title
+- Display a bar chart with the number of employees by Gender
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Example Test Cases:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- I can build the project and run the application as per instructions given
+- I can run a test suite against the project
+- I can directly navigate to the `Dashboard` page or `Add Employee Form` page
+- Navigating to the `Dashboard` page should show a loading indicator until it loads the data (hint: Use Network Throttling in Dev Tools)
+- I can enter information in the `Add Employee Form` page and have it handle input validation
+- After adding a new employee, I should see it in the `Dashboard` page table
 
-### `npm run eject`
+_NOTE: This is not the complete set of test cases_
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tips
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Create clean code
+- Use modern APIs. Assume that no IE support is required
+- Describe the assumptions behind your implementation and what improvements you could make if you had more time
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deliverable Submission:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When complete, please send a link to your project's Git repository.
