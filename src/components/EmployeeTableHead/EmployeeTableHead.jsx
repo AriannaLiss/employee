@@ -1,20 +1,14 @@
 import React from 'react';
 import { Box, TableCell, TableHead, TableRow, TableSortLabel } from '@mui/material';
 import { visuallyHidden } from '@mui/utils';
+import { FIELDS } from '../../utils/const';
 
 
 const EmployeeTableHead = ({ order, orderBy, onRequestSort }) => {
-    const headCells = [
-        {id:'name', label:'Name'},
-        {id:'jobTitle', label:'Job Title'},
-        {id:'tenure', label:'Tenure'},
-        {id:'gender', label:'Gender'}
-    ];
-    
     return (
         <TableHead >
             <TableRow>
-                {headCells.map(headCell => 
+                {FIELDS.map(headCell => 
                     <TableCell
                         key={headCell.id}
                         align='left'
