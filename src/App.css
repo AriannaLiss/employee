@@ -3,3 +3,8 @@
     justify-content: end;
     padding: 1rem;
 }
+
+h1{
+    text-transform: capitalize;
+    text-decoration: underline;
+}

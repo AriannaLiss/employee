@@ -6,3 +6,12 @@ export const FIELDS = [
 ];
 
 export const MAX_EXPERIENCE = 15;
+
+export const EMPTY_EMPLOYEE={
+    name:'',
+    jobTitle:'',
+    tenure:1,
+    gender:''
+}
+
+export const NOT_EMPTY_FIELDS=['name', 'jobTitle'];

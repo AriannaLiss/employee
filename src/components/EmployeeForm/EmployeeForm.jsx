@@ -1,22 +1,21 @@
 import { Box, Button, TextField } from '@mui/material';
 import React from 'react';
-import { getErrorMsg, hasError } from '../../utils/methods';
+import { getErrorMsg, hasError } from '../../utils/validation';
 import AddSelector from '../UI/AddSelector/AddSelector';
 import MarkedSlider from '../UI/MarkedSlider/MarkedSlider';
 import Selector from '../UI/Selector/Selector';
 import classes from './EmployeeForm.module.css'
 
-const EmployeeForm = ({jobTitles, employee, onChange, submit,close,errors}) => {
-
+const EmployeeForm = ({ employee, jobTitles, errors, onChange, submit, close}) => {   
     return (
         <Box
             component="form"
             sx={{
-                width:'25rem',
-                '& .MuiTextField-root': { m: 1, width: '50ch' },
-                '& .MuiFormControl-root': { m: 1, width: '50ch' },
-                '& .MuiBox-root': { m: 1, width: '50ch' },
-                '& .MuiButton-root': { m: 1, width: '50ch' },
+                width:'50%',
+                '& .MuiTextField-root': { m: 1, width: '100%' },
+                '& .MuiFormControl-root': { m: 1, width: '100%' },
+                '& .MuiBox-root': { m: 1, width: '100%' },
+                '& .MuiButton-root': { m: 1, width: '100%' },
             }}
             noValidate
             autoComplete="off"
@@ -30,6 +29,7 @@ const EmployeeForm = ({jobTitles, employee, onChange, submit,close,errors}) => {
                 onChange={(e)=>onChange('name',e.target.value)} 
                 helperText={getErrorMsg(errors,'name')}
             />
+
             <AddSelector
                 id='jobTitle'
                 value={employee.jobTitle}
@@ -38,12 +38,14 @@ const EmployeeForm = ({jobTitles, employee, onChange, submit,close,errors}) => {
                 label="Job Title"
                 errors={errors}
             />
+
             <MarkedSlider
                 id='tenure'
                 label='Tenure'
                 setter={(value)=>onChange('tenure',value)}
                 value={employee.tenure}
             />
+
             <Selector 
                 id='gender'
                 label='Gender'

@@ -1,6 +1,6 @@
 import { Autocomplete, createFilterOptions, TextField } from '@mui/material';
 import React from 'react';
-import { getErrorMsg, hasError } from '../../../utils/methods';
+import { getErrorMsg, hasError } from '../../../utils/validation';
 
 const filter = createFilterOptions();
 
