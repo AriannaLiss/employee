@@ -10,7 +10,7 @@ export const MAX_EXPERIENCE = 15;
 export const EMPTY_EMPLOYEE={
     name:'',
     jobTitle:'',
-    tenure:1,
+    tenure:3,
     gender:''
 }
 

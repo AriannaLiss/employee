@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EmployeeForm from '../../components/EmployeeForm/EmployeeForm';
 import { EmployeeContext } from '../../context';
@@ -11,7 +11,6 @@ const NewEmployeePage = () => {
     const {employees, setEmployees} = useContext(EmployeeContext);
     
     const [employee, setEmployee] = useState(EMPTY_EMPLOYEE)
-    const [jobTitles, setJobTitles] = useState([]);
     const [errors, setErrors] = useState([]);
 
     const router = useNavigate();
@@ -24,10 +23,10 @@ const NewEmployeePage = () => {
     function addEmployee(){
         if (!validateEmployee()) return;
         setEmployees(prev=>[...prev, employee]);
-        closeFrom();
+        closeForm();
     }
 
-    function closeFrom(){
+    function closeForm(){
         setEmployee(EMPTY_EMPLOYEE);
         router('/employees');
     }
@@ -38,12 +37,10 @@ const NewEmployeePage = () => {
     }
 
     useEffect(()=>{
-        setJobTitles(getLists(employees,'jobTitle'));
-    },[employees])
-
-    useEffect(()=>{
         errors.length>0 && console.log('errors', errors)
     },[errors])
+
+    const jobTitles = useMemo(()=>getLists(employees,'jobTitle'),[employees])
 
     return (
         <div className={classes.container}>
@@ -53,7 +50,7 @@ const NewEmployeePage = () => {
                 errors={errors} 
                 onChange={handleChangeEmployee} 
                 submit={addEmployee} 
-                close={closeFrom}
+                close={closeForm}
             />
         </div>
     );

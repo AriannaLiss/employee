@@ -5,7 +5,6 @@ import './App.css'
 import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './components/AppRouter/AppRouter';
 import { EmployeeContext } from './context';
-import Header from './components/Header/Header';
 
 const App = () => {
     const [employees, setEmployees] = useState([]);
@@ -25,7 +24,6 @@ const App = () => {
     return (
         <EmployeeContext.Provider value={{employees, setEmployees, isLoading}}>
             <BrowserRouter>
-                <Header/>
                 <AppRouter/>
             </BrowserRouter>
         </EmployeeContext.Provider>
