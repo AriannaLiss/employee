@@ -14,11 +14,13 @@ const EmployeeTableHead = ({ order, orderBy, onRequestSort }) => {
                         align='left'
                         sx={{bgcolor:'grey', color:'white'}}
                         sortDirection={orderBy === headCell.id ? order : false}
+                        data-test={`table-head-${headCell.id}`}
                     >
                         <TableSortLabel
                             active={orderBy === headCell.id}
                             direction={orderBy === headCell.id ? order : 'asc'}
                             onClick={e => onRequestSort(e, headCell.id)}
+                            data-test={`table-head-${headCell.id}-${order}`}
                         >
                             {headCell.label}
                             {orderBy === headCell.id ? (

@@ -11,7 +11,8 @@ const EmployeeForm = ({ employee, jobTitles, errors, onChange, submit, close}) =
         <Box
             component="form"
             sx={{
-                width:'50%',
+                width:'80%',
+                maxWidth: 500,
                 '& .MuiTextField-root': { m: 1, width: '100%' },
                 '& .MuiFormControl-root': { m: 1, width: '100%' },
                 '& .MuiBox-root': { m: 1, width: '100%' },
@@ -28,6 +29,7 @@ const EmployeeForm = ({ employee, jobTitles, errors, onChange, submit, close}) =
                 value={employee.name} 
                 onChange={(e)=>onChange('name',e.target.value)} 
                 helperText={getErrorMsg(errors,'name')}
+                data-test='name'
             />
 
             <AddSelector
@@ -55,10 +57,10 @@ const EmployeeForm = ({ employee, jobTitles, errors, onChange, submit, close}) =
             />
                 
             <div className={classes.btnContainer}>
-                <Button variant="text" onClick={close}>
+                <Button variant="text" onClick={close} data-test='cancel'>
                         Cancel
                 </Button>
-                <Button variant="outlined" onClick={submit}>
+                <Button variant="outlined" onClick={submit} data-test='submit'>
                         Save
                 </Button>
             </div>

@@ -5,7 +5,7 @@ import './Loader.css'
 const Loader = () => {
     return (
         <div className='loader-container'>
-            <CircularProgress/>
+            <CircularProgress data-test='loader'/>
         </div>
     );
 };

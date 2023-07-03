@@ -8,6 +8,7 @@ const AddSelector = ({id,label,value,setter,options,errors}) => {
     return (
         <Autocomplete
             id={id}
+            data-test={id}
             freeSolo
             value={value}
             onChange={(event, newValue) => {

@@ -11,9 +11,10 @@ const Selector = ({label, id, value, onChange, options}) => {
                 value={value}
                 label={label}
                 onChange={onChange}
+                data-test={id}
             >
                 {options? options.map(opt => 
-                    <MenuItem key={opt} value={opt}>{opt}</MenuItem>
+                    <MenuItem key={opt} value={opt} data-test={`select-option-${opt}`}>{opt}</MenuItem>
                 ):''}    
             </Select>
         </FormControl>

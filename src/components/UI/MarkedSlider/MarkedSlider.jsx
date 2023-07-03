@@ -11,6 +11,7 @@ const MarkedSlider = ({id, label, setter, value}) => {
             </Typography>
             <Slider
                 id={id}
+                data-test={id}
                 aria-labelledby={id+'-label'}
                 step={1}
                 marks

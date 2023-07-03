@@ -1,5 +1,6 @@
 import { styled, TableBody, TableCell, TableRow } from '@mui/material';
 import React from 'react';
+import { FIELDS } from '../../utils/const';
   
   const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
@@ -15,13 +16,10 @@ const EmployeeTableBody = ({rows}) => {
     return (
         <TableBody>
             {rows.map(row => 
-                <StyledTableRow key={row.name}>
-                    <TableCell component="th" scope="row">
-                        {row.name}
-                    </TableCell>
-                    <TableCell align='left'>{row.jobTitle}</TableCell>
-                    <TableCell align='left'>{row.tenure}</TableCell>
-                    <TableCell align='left'>{row.gender}</TableCell>
+                <StyledTableRow key={row.name} data-test={`table-row-${row.name}`}>
+                    {FIELDS.map(field=>
+                        <TableCell align='left' data-test={`table-cell-${field.id}`} key={`table-cell-${row.name}-${field.id}`}>{row[field.id]}</TableCell>
+                    )}
                 </StyledTableRow>
             )}
         </TableBody>
