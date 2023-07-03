@@ -5,7 +5,7 @@ export function fillEmployee(name='Lidiia', jobTitle='dev', tenure='1', gender='
     cy.get('.MuiAutocomplete-popper li[data-option-index="0"]').click()
     
     cy.getBySel('tenure').within(() => {
-      cy.get(`span[data-index=${tenure}]`).click();
+      cy.get(`span[data-index=${tenure}]`).click({force: true});
     });
     
     cy.getBySel('gender').click();

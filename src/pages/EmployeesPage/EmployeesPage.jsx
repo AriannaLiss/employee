@@ -13,7 +13,7 @@ const EmployeesPage = () => {
     return (
         <div className={classes.container}>
             <Header/>
-            <div className="btn-container">
+            <div className={classes.btnContainer}>
                 <Button variant="outlined" onClick={()=> router('/employees/create')} color='inherit' data-test='addNewEmployee'>
                     Add new employee...
                 </Button>

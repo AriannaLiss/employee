@@ -2,3 +2,9 @@
     max-width: 80rem;
     margin: 0 auto;
 }
+
+.btnContainer{
+    display:flex;
+    justify-content: end;
+    padding: 1rem;
+}
