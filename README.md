@@ -1,31 +1,18 @@
-# Cisco SNA UI New Hire Test
+# CRUD application: React, Routing, Material UI, Cypress.
 
-## Directions:
+##Application for managing a list of employees: adding and sorting. 
 
-Create a new application that displays Employee information. 
-The application should contain a `Dashboard` page and an `Add Employee Form` page. 
+The application is written in React and tested by Cypress.
+It displays Employee information, that is given in a JSON file. 
+It contains a `Dashboard` page and an `Add Employee Form` page. 
 
-The `Dashboard` page should do the following:
+The `Dashboard` page does the following:
 
-- Display employee information in a table
-- Allow to sort all table columns in ascending and descending order
-- Load application data from the supplied JSON file
-- Contain an `Add Employee` button, which navigates to the `Add Employee Form` page
-- Update the employee table after adding a new employee
-
-Use the attached wireframe as an example of how the application should generally look.
-
-## Tools:
-
-Write the application using a JavaScript library of your choice.
-Test the application using a technology of your choice.
-
-## Extra Credit (not required):
-
-Display the charts in the wireframe using a chart library of your choice.
-
-- Display a pie chart showing the number of employees by Job Title
-- Display a bar chart with the number of employees by Gender
+- Displays employee information in a table
+- Allows sorting all table columns in ascending and descending order
+- Loads application data from the supplied JSON file
+- Contains an `Add Employee` button, which navigates to the `Add Employee Form` page
+- Updates the employee table after adding a new employee
 
 ## Example Test Cases:
 
@@ -35,15 +22,4 @@ Display the charts in the wireframe using a chart library of your choice.
 - Navigating to the `Dashboard` page should show a loading indicator until it loads the data (hint: Use Network Throttling in Dev Tools)
 - I can enter information in the `Add Employee Form` page and have it handle input validation
 - After adding a new employee, I should see it in the `Dashboard` page table
-
-_NOTE: This is not the complete set of test cases_
-
-## Tips
-
-- Create clean code
-- Use modern APIs. Assume that no IE support is required
-- Describe the assumptions behind your implementation and what improvements you could make if you had more time
-
-## Deliverable Submission:
-
-When complete, please send a link to your project's Git repository.
+  etc.
